@@ -67,3 +67,5 @@ app.post("/todos/add",async(req,res)=>{
   await setDoc(doc(db,"todos/"+(querySnapshot.docs.length+1)),{userId,title,completed});
   res.send({ok:true,id:querySnapshot.docs.length});
 });
+
+module.exports=app;
